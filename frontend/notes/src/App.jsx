@@ -5,6 +5,7 @@ const App = () => {
     <>
       <div>
         <h1>notes app</h1>
+        <h1>notes app</h1>
       </div>
     </>
   );
