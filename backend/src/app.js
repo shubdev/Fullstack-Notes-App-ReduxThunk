@@ -1,10 +1,11 @@
 import express from "express";
-import db from "./config/db.js";
+import noteRoutes from "./routes/notes.route.js";
 
 const app = express();
 
 app.use(express.json());
 
-app.listen(3000, () => {
-    console.log("Server started on port 3000");
-});
+//routes  
+app.use("/api/notes", noteRoutes);
+
+export default app;

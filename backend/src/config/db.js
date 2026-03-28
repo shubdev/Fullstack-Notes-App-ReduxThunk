@@ -1,27 +1,14 @@
-import express from "express";
 import mongoose from "mongoose";
-
-const app = express();
-
-app.use(express.json());
 
 const connectDB = async () => {
   try {
-    await mongoose.connect("mongodb://localhost:27017/noteapp", {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
+    await mongoose.connect("mongodb://localhost:27017/noteapp");
+    console.log("database is connected.");
   } catch (error) {
     console.error("Error connecting to MongoDB:", error);
+    process.exit(1); //exit with failure
   }
 };
 
-connectDB();
+export default connectDB;
 
-export default app;
-
-/* 
-
-
-
-*/

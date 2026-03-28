@@ -1,9 +1,9 @@
 import app from "./src/app.js";
-import db from "./src/config/db.js";
+import connectDB from "./src/config/db.js";
 
-
+connectDB();
 
 app.listen(3000, () => {
-    console.log("Server started on port 3000");
+  console.log("Server started on port 3000");
 });
 
