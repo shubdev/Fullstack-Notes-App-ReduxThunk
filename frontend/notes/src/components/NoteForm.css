@@ -1,0 +1,138 @@
+/* ===== Note Form Card ===== */
+.note-form-card {
+  background: linear-gradient(135deg, #1e1e2e 0%, #2a2a3d 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 32px;
+  margin-bottom: 40px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.note-form-card:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* ===== Form Title ===== */
+.form-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #e0e0ff;
+  margin-bottom: 24px;
+  letter-spacing: -0.02em;
+}
+
+/* ===== Form Layout ===== */
+.note-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #a0a0c0;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* ===== Inputs ===== */
+.form-input,
+.form-textarea {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 14px 16px;
+  color: #e8e8f0;
+  font-size: 1rem;
+  font-family: "Inter", sans-serif;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease,
+    background 0.3s ease;
+  outline: none;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  border-color: #7c5cfc;
+  box-shadow: 0 0 0 3px rgba(124, 92, 252, 0.2);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* ===== Buttons ===== */
+.form-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.btn {
+  padding: 12px 28px;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: "Inter", sans-serif;
+  letter-spacing: 0.02em;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #7c5cfc 0%, #5a3de8 100%);
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(124, 92, 252, 0.35);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(124, 92, 252, 0.5);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-cancel {
+  background: rgba(255, 255, 255, 0.06);
+  color: #c0c0d8;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn-cancel:hover {
+  background: rgba(255, 80, 80, 0.15);
+  color: #ff6b6b;
+  border-color: rgba(255, 80, 80, 0.3);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+  .note-form-card {
+    padding: 20px;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
