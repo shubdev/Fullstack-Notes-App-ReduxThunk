@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { addNote, updateNote } from "../redux/features/counter/notesSlice";
+import { useNotes } from "../hook/useNotes";
 import "./NoteForm.css";
 
 const NoteForm = ({ editingNote, setEditingNote }) => {
+  const { addNote } = useNotes();
   const dispatch = useDispatch();
   const [title, setTitle] = useState(editingNote ? editingNote.title : "");
   const [description, setDescription] = useState(
@@ -11,7 +12,7 @@ const NoteForm = ({ editingNote, setEditingNote }) => {
   );
 
   // Sync form fields when editingNote changes
-  React.useEffect(() => {
+  useEffect(() => {
     if (editingNote) {
       setTitle(editingNote.title);
       setDescription(editingNote.description);

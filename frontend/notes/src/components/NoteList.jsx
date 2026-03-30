@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { deleteNote } from "../redux/features/counter/notesSlice";
+import { deleteNote } from "../redux/slice/notesSlice";
 import "./NoteList.css";
 
 const NoteList = ({ setEditingNote }) => {
